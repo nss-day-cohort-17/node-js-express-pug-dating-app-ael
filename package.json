@@ -4,6 +4,7 @@
   "description": "Express pug exercise",
   "main": "app.js",
   "scripts": {
+    "db:reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
