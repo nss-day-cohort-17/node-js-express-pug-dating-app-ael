@@ -1,7 +1,7 @@
 'use strict'
 
 const {Router} = require('express');
-const {show} = require('./controllers/loginCtrl');
+const {show} = require('../controllers/loginCtrl');
 
 const loginRouter = Router();
 

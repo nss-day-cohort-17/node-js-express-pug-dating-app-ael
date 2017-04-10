@@ -1,7 +1,7 @@
 'use strict'
 
 const {Router} = require('express');
-const {show} = require('./controllers/registrationCtrl.js');
+const {show} = require('../controllers/registrationCtrl.js');
 
 const registrationRouter = Router();
 

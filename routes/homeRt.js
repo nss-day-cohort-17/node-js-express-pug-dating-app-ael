@@ -1,7 +1,7 @@
 'use strict'
 
 const {Router} = require('express');
-const {show} = require('controllers/homeCtrl.js');
+const {show} = require('../controllers/homeCtrl.js');
 
 const homeRouter = Router();
 
