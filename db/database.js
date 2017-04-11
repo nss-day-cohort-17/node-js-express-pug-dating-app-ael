@@ -13,4 +13,4 @@ const bookshelf = require('bookshelf')(knex);
 // bookshelf.plugin(require('bookshelf-bcrypt'));
 bookshelf.plugin('registry')
 
-module.exports = { bookshelf };
+module.exports = { bookshelf, knex };
