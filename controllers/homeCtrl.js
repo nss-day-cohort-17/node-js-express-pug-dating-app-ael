@@ -2,7 +2,7 @@
 
 const { User } = require('../models/userMd')
 
-// Returns array of user objects
+// Returns promise that resolves with array of user objects
 const getUsers = () => {
 	return User.forge().fetchAll()
 		.then(models => models.toJSON())
@@ -10,6 +10,8 @@ const getUsers = () => {
 
 module.exports.show = (req, res) => {
   getUsers().then(users => {
-	  res.render('home', {page: 'Home', users})
+	  return res.render('home', {page: 'Home', users})
+  }).catch(err => {
+  	return res.render('home')
   })
 }
