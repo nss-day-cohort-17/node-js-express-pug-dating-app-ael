@@ -18,7 +18,7 @@ const User = bookshelf.Model.extend({
 		// The primary key in this table belongs
 		// to the liked_user_id in the likes table
 		return this.hasMany('Like', 'liked_user_id')
-	},
+	}
 })
 bookshelf.model('User', User)
 
