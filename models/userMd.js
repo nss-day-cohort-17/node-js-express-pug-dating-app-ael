@@ -2,4 +2,6 @@
 
 const { bookshelf } = require('../db/database.js')
 
-const User
+const User = bookshelf.Model.extend({
+	tableName: 'users'
+})
