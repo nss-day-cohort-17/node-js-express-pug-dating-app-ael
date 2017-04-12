@@ -52,7 +52,8 @@ body {
   margin: 2%;
 }
 
-.icon {
+.icon-heart {
   height: 50px;
   color: red;
+  float: right;
 }

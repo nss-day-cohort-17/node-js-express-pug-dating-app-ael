@@ -16,11 +16,7 @@ block content
   div.profile-feed
 
     each user in users
-      .card
-        if liked
-          img.icon(src=`/img/add-to-favourites.png` alt="icon")
-        else 
-          a like
+      .card(id=user.id)
         .card-img-sect
           img.card-img(src=user.image)
         .card-info-sec
@@ -30,3 +26,10 @@ block content
             p Available
           else
             p Not available
+        div.card-like-sect
+          if false
+            a.icon
+              img.icon-heart(src=`/img/add-to-favourites.png` alt="icon")
+          else 
+            a.icon
+              p.icon-like like
