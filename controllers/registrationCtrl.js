@@ -24,7 +24,7 @@ module.exports.create = (req, res, err) => {
   .save()
   .then(function () {
     console.log("i've been saved!")
-    res.redirect('/splash');
+    res.redirect('/liked');
   })
   //if it doesn't work
   .catch((err) => {
