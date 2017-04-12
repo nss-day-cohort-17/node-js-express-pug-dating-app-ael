@@ -1,6 +1,8 @@
 'use strict'
 
-const { bookshelf } = require('../db/database.js')
+const { bookshelf } = require('../db/database.js');
+const { User } = require('./userMd');
+const currentUser = 1;
 
 // Todo: add foreign key relationship to model
 const Like = bookshelf.Model.extend({
@@ -17,8 +19,22 @@ const Like = bookshelf.Model.extend({
 		// to liked_user_id in this table
 		return this.belongsTo('User', 'liked_user_id')
 	}
-})
+},
+{
+	findLikedUsers: function(user_id) {
+		return Like.forge().query({where: {user_id}}).fetchAll({withRelated: ['likedUser']})
+		.then((users)=>{
+			let likedUserArray = users.map(user => user.related('likedUser').toJSON());
+			return likedUserArray;
+		})
+		.catch(()=>{
+			console.log('catch in the findLikedUser');
+			return (null);
+		})
+
+	}
+}
+)
 bookshelf.model('Like', Like)
 
 module.exports = {Like}
-
