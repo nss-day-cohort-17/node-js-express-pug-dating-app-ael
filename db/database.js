@@ -10,7 +10,7 @@ const knex = require('knex')(config);
 const bookshelf = require('bookshelf')(knex);
 
 // Allows us to hash the users' passwords before saving them
-// bookshelf.plugin(require('bookshelf-bcrypt'));
+bookshelf.plugin(require('bookshelf-bcrypt'));
 bookshelf.plugin('registry');
 
 module.exports = { bookshelf, knex };
