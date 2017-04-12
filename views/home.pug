@@ -2,46 +2,33 @@ extends partials/layout.pug
 
 block content
   div.user-profile
-    
-    //- for in loop
-    
+
     img.user-img(src=`http://i.imgur.com/8KEdZt9.gif`)
     h1 Jonathon Doe
     h3 Nashville, TN
-    p generate e-business e-services 
-    
+    p generate e-business e-services
+
     p Available
-      
+
     h5 Interests: Sales
     h5 Aversions: Research and Development
-    
-  
+
+
   div.profile-feed
 
-    .card
-      .card-img-sect
-        img.card-img(src=`http://i.imgur.com/8KEdZt9.gif`)
-      .card-info-sect
-        h3 Jonathon Doe
-        h4 Nashville, TN
-        p Available
-        
-    .card
-      .card-img-sect
-        img.card-img(src=`http://i.imgur.com/8KEdZt9.gif`)
-      .card-info-sect
-        h3 Jonathon Doe
-        h4 Nashville, TN
-        p Available
-        
-    .card
-      .card-img-sect
-        img.card-img(src=`http://i.imgur.com/8KEdZt9.gif`)
-      .card-info-sect
-        h3 Jonathon Doe
-        h4 Nashville, TN
-        p Available
+    each user in users
+      .card
+        .card-img-sect
+          img.card-img(src=user.image)
+        .card-info-sec
+          h3 #{user.first_name} #{user.last_name}
+          h4 #{user.city}, #{user.state}
+          if user.available
+            p Available
+          else
+            p Not available
 
 
 
-    
+
+
