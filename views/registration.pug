@@ -3,7 +3,7 @@ extends partials/layout.pug
 block content
 		h1.text-center Create Profile
 		if err
-			h4= err
+			h4= err.message
 		form(method="POST")
 			.form-group
 				label(for="email") Email

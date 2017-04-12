@@ -4,7 +4,7 @@ const passport = require('passport');
 const {Strategy} = require('passport-local');
 const {knex} = require('./db/database.js');
 
-const User = require('./models/userMd.js');
+const {User} = require('./models/userMd.js');
 
 passport.serializeUser((user, done)=> done(null, user.id));
 

@@ -36,18 +36,18 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'secretlovesuperkey'
 }));
 
-// //reauthenticate user on every request
-// require('./passport-strategies.js')
-// app.use(passport.initialize());
-// app.use(passport.session());
+//reauthenticate user on every request
+require('./passport-strategies.js')
+app.use(passport.initialize());
+app.use(passport.session());
 
 
-// //adding an anymous fuct to middleware
-// app.use((req, res, next) => {
-//   //setting up true or false
-//   app.locals.email = req.user && req.user.email
-//   next()
-// })
+//adding an anymous fuct to middleware
+app.use((req, res, next) => {
+  //setting up true or false
+  app.locals.email = req.user && req.user.email
+  next()
+})
 
 
 
