@@ -14,6 +14,7 @@ app.set('view engine', 'pug')
 
 // Middleware
 app.use(express.static('public'))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(routes)
 
 // Render 404 if no other route matched

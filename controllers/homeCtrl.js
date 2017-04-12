@@ -17,6 +17,27 @@ module.exports.show = (req, res) => {
 }
 
 module.exports.create = (req, res) => {
-	console.log('req.body:', req.body)
-	res.end()
+	const {liked_user_id} = req.body
+	Like.forge({user_id: CURRENT_USER_ID, liked_user_id}).save()
+		.then(model => {
+			res.end()
+		}).catch(err => console.log(err))
 }
+
+module.exports.remove = (req, res) => {
+	const {liked_user_id} = req.body
+	console.log('delete happened')
+	Like.forge({user_id: CURRENT_USER_ID, liked_user_id})
+	.query({where: {user_id: CURRENT_USER_ID, liked_user_id}})
+	.destroy()
+		.then(model => {
+			console.log('row deleted from database')
+			res.end()
+		})
+}
+
+
+
+
+
+
