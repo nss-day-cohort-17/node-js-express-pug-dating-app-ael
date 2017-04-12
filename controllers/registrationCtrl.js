@@ -8,9 +8,16 @@ module.exports.show = (req, res) => {
 }
 
 module.exports.create = (req, res, err) => {
+
+
   console.log("registration");
   let {body: {email, password, first_name, last_name, image, city, state, interests, aversions, bio}} = req;
-
+  if (password !== req.body.passsword_confirm) {
+    console.log(`I'm reloading the page because passwords don't match!`)
+    let body = req.body;
+    res.render('registration', {page: 'Registration', err, body})
+    return
+  }
   let available = true;
   User.forge({email, password, first_name, last_name, image, city, state, interests, aversions, bio, available
   })
