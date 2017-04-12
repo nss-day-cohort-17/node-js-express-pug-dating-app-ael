@@ -16,12 +16,11 @@ block content
     h5 Interests: #{currentUser.interests}
     h5 Aversions: #{currentUser.aversions}
 
-
   div.profile-feed
 
     each user in users
       if user.id !== currentUser.id
-        .card
+        .card(id=user.id)
           .card-img-sect
             img.card-img(src=user.image)
           .card-info-sec
@@ -31,8 +30,11 @@ block content
               p Available
             else
               p Not available
-
-
-
-
+          div.card-like-sect
+            if likedUserIds.includes(user.id)
+              a.icon
+                img.icon-heart(src=`/img/heart-red.png` alt="icon")
+            else
+              a.icon
+                img.icon-like(src=`/img/heart-white.png` alt="icon")
 

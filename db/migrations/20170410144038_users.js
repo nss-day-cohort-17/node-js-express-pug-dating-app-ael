@@ -9,9 +9,9 @@ exports.up = function(knex, Promise) {
 	    table.string('image').notNullable();
 	    table.string('city').notNullable();
 	    table.string('state').notNullable();
-	    table.string('bio').notNullable();
-
 	    table.boolean('available').notNullable();
+
+	    table.string('bio');
 	    table.string('interests');
 	    table.string('aversions');
 		});
