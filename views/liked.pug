@@ -1,0 +1,19 @@
+extends partials/layout.pug
+
+block content
+  .container
+    .jumbotron
+      h1 Why, Hello There...
+      p Finding the who you're interested in is half the battle.  Here's who you've liked:
+    .row
+      if (!users)
+        h3 you haven't liked anyone yet.  Come now, that attitude won't get you very far.
+      else
+        each user in users
+          .col-sm-6.col-md-4
+            .thumbnail
+              img(src=user.image alt=`${user.first_name} image`)
+              .caption
+                .Thumbnail.label
+                h3 #{user.first_name} #{user.last_name}
+                p #{user.city}, #{user.state}

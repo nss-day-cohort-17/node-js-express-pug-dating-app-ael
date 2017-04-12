@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title
+		link(rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet' href='/css/main.css')
+	body
+		
+		include navbar.pug
+		.container
+
+			block content
+
+		script(src='/lib/jquery/dist/jquery.js')
+		script(src='/lib/bootstrap/dist/js/bootstrap.js')
+		script(src='/js/frontend.js')

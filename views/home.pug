@@ -1,0 +1,35 @@
+extends partials/layout.pug
+
+block content
+  div.user-profile
+
+    img.user-img(src=`http://i.imgur.com/8KEdZt9.gif`)
+    h1 Jonathon Doe
+    h3 Nashville, TN
+    p generate e-business e-services
+
+    p Available
+
+    h5 Interests: Sales
+    h5 Aversions: Research and Development
+
+  div.profile-feed
+
+    each user in users
+      .card(id=user.id)
+        .card-img-sect
+          img.card-img(src=user.image)
+        .card-info-sec
+          h3 #{user.first_name} #{user.last_name}
+          h4 #{user.city}, #{user.state}
+          if user.available
+            p Available
+          else
+            p Not available
+        div.card-like-sect
+          if false
+            a.icon
+              img.icon-heart(src=`/img/add-to-favourites.png` alt="icon")
+          else 
+            a.icon
+              p.icon-like like
