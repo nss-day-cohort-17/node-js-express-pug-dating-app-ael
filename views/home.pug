@@ -30,10 +30,11 @@ block content
               p Available
             else
               p Not available
-          .card-like-sect
-            if true
+          div.card-like-sect
+            if likedUserIds.includes(user.id)
               a.icon
                 img.icon-heart(src=`/img/heart-red.png` alt="icon")
-            else 
+            else
               a.icon
                 img.icon-like(src=`/img/heart-white.png` alt="icon")
+

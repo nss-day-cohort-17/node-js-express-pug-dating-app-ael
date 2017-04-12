@@ -1,6 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema
-	  .createTable('likes', function(table){
+	  .createTable('likes', function(table) {
+	  	table.increments()
 	    table.integer('user_id').notNullable();
 	    table.integer('liked_user_id').notNullable();
 
