@@ -25,9 +25,10 @@ const Like = bookshelf.Model.extend({
 		console.log('find users I liked!')
 		return Like.forge().query({where: {user_id}}).fetchAll({withRelated: ['likedUser']})
 		.then((users)=>{
-			console.log('users in the THEN with get', users.get('likedUser'))
-			users.forEach(user => console.log(users.toJSON()))
-			return users.toJSON();
+			// console.log('users in the THEN with get', users.related('likedUser').toJSON())
+			users.forEach(user => console.log(user.related('likedUser').toJSON()))
+			let likedUserArray = users.map(user => user.related('likedUser').toJSON());
+			return likedUserArray;
 		})
 		.catch(()=>{
 			console.log('catch in the findLikedUser');

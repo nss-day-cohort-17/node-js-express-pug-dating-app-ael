@@ -3,6 +3,7 @@
 const {knex} = require('../db/database.js');
 //const  {Like}  = require('../models/likesMd.js')
 const { Like: {findLikedUsers} } = require('../models/likesMd.js')
+
 // const Like = ()=> knex('likes');
 const currentUserId = 1;
 
