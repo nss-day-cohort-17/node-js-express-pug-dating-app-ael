@@ -30,11 +30,10 @@ block content
               p Available
             else
               p Not available
-          div.card-like-sect
-            if false
+          .card-like-sect
+            if true
               a.icon
-                img.icon-heart(src=`/img/add-to-favourites.png` alt="icon")
-            else
+                img.icon-heart(src=`/img/heart-red.png` alt="icon")
+            else 
               a.icon
-                p.icon-like like
-
+                img.icon-like(src=`/img/heart-white.png` alt="icon")
