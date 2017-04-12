@@ -8,11 +8,11 @@ const User = require('./models/userMd.js');
 
 passport.serializeUser((user, done)=> done(null, user.id));
 
-passport.deserializeUser((id, done))=>{
+passport.deserializeUser((id, done)=>{
   knex('users').where({id}).first()
   .then((user)=>{done(null, user)})
   .catch((err)=>{done(err, null)})
-}
+});
 
 const localStrategy = new Strategy({
   usernameField: 'email',
