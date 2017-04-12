@@ -19,6 +19,11 @@ const User = bookshelf.Model.extend({
 		// to the liked_user_id in the likes table
 		return this.hasMany('Like', 'liked_user_id')
 	}
+}, {
+	// Returns promise that resolves with array of users
+	getUsers: function() {
+		return User.forge().fetchAll().then(models => models.toJSON())
+	}
 })
 bookshelf.model('User', User)
 
