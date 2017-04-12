@@ -8,10 +8,11 @@ const CURRENT_USER_ID = 1
 module.exports.show = (req, res) => {
 	Promise.all([
 		User.getCurrentUser(CURRENT_USER_ID),
-		User.getUsers()
+		User.getUsers(),
+		Like.findLikedUserIds(CURRENT_USER_ID)
 	]).then(values => {
-		const [currentUser, users] = values
-		res.render('home', {page: 'Home', users, currentUser})
+		const [currentUser, users, likedUserIds] = values
+		res.render('home', {page: 'Home', users, currentUser, likedUserIds})
 	})
 }
 

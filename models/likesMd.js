@@ -32,6 +32,13 @@ const Like = bookshelf.Model.extend({
 			return (null);
 		})
 	},
+	findLikedUserIds: function(user_id) {
+		return Like.forge().query({where: {user_id}}).fetchAll()
+			.then(models => {
+				return models.map(model => model.get('liked_user_id'))
+				// return likedUserIds
+			})
+	},
 	// Sees if like exists for given user_id and liked_user_id
 	// Returns promise that resolves to true or false
 	seeIfLikeExists: function(user_id, liked_user_id) {
