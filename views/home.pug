@@ -19,22 +19,22 @@ block content
   div.profile-feed
 
     each user in users
-    if user.id !== currentUser.id
-      .card(id=user.id)
-        .card-img-sect
-          img.card-img(src=user.image)
-        .card-info-sec
-          h3 #{user.first_name} #{user.last_name}
-          h4 #{user.city}, #{user.state}
-          if user.available
-            p Available
-          else
-            p Not available
-        div.card-like-sect
-          if false
-            a.icon
-              img.icon-heart(src=`/img/add-to-favourites.png` alt="icon")
-          else 
-            a.icon
-              p.icon-like like
+      if user.id !== currentUser.id
+        .card(id=user.id)
+          .card-img-sect
+            img.card-img(src=user.image)
+          .card-info-sec
+            h3 #{user.first_name} #{user.last_name}
+            h4 #{user.city}, #{user.state}
+            if user.available
+              p Available
+            else
+              p Not available
+          div.card-like-sect
+            if false
+              a.icon
+                img.icon-heart(src=`/img/add-to-favourites.png` alt="icon")
+            else
+              a.icon
+                p.icon-like like
 
