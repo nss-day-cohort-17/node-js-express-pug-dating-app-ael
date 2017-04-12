@@ -19,17 +19,6 @@ block content
   div.profile-feed
 
     each user in users
-      .card(id=user.id)
-        .card-img-sect
-          img.card-img(src=user.image)
-        .card-info-sec
-          h3 #{user.first_name} #{user.last_name}
-          h4 #{user.city}, #{user.state}
-          if user.available
-            p Available
-          else
-            p Not available
-
       if user.id !== currentUser.id
         .card(id=user.id)
           .card-img-sect
@@ -42,7 +31,6 @@ block content
             else
               p Not available
           .card-like-sect
-            
             if true
               a.icon
                 img.icon-heart(src=`/img/heart-red.png` alt="icon")
