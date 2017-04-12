@@ -23,6 +23,13 @@ const User = bookshelf.Model.extend({
 	// Returns promise that resolves with array of users
 	getUsers: function() {
 		return User.forge().fetchAll().then(models => models.toJSON())
+	},
+
+	// Takes argument of a user id
+	// Returns promise that resolves with user object
+	getCurrentUser: function(id) {
+		return User.forge().query({where: {id}}).fetch()
+			.then(model => model.toJSON())
 	}
 })
 bookshelf.model('User', User)

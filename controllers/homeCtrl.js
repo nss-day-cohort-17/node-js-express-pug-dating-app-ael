@@ -2,10 +2,17 @@
 
 const { User } = require('../models/userMd')
 
+const CURRENT_USER_ID = 2
+
+
+
 module.exports.show = (req, res) => {
-  User.getUsers().then(users => {
-	  return res.render('home', {page: 'Home', users})
-  }).catch(err => {
-  	return res.render('home')
-  })
+
+	Promise.all([
+		User.getCurrentUser(CURRENT_USER_ID),
+		User.getUsers()
+	]).then(values => {
+		const [currentUser, users] = values
+		res.render('home', {page: 'Home', users, currentUser})
+	})
 }
