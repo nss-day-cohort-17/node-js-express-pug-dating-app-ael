@@ -7,40 +7,40 @@ block content
 		form(method="POST")
 			.form-group
 				label(for="email") Email
-				input.form-control(type="text" id="email" name="email" required)
+				input.form-control(type="text" id="email" name="email" value=body.email required)
 			.form-group
 				label(for="password") Password
-				input.form-control(type="password" id="password" name="password" required)
+				input.form-control(type="password" id="password" name="password" value=body.password required)
 			.form-group
 				label(for="password_confirm") Confirm password
-				input.form-control(type="password" id="password_confirm" name="password_confirm" required)
+				input.form-control(type="password" id="password_confirm" name="password_confirm" value=body.password_confirm required)
 
 			.form-group
 				label(for="first_name") First name
-				input.form-control(type="text" id="first_name" name="first_name" required)
+				input.form-control(type="text" id="first_name" name="first_name" value=body.first_name required)
 			.form-group
 				label(for="last_name") Last name
-				input.form-control(type="text" id="last_name" name="last_name" required)
+				input.form-control(type="text" id="last_name" name="last_name" value=body.last_name required)
 			.form-group
 				label(for="image") Image url
-				input.form-control(type="text" id="image" name="image" required)
+				input.form-control(type="text" id="image" name="image" value=body.image required)
 			.form-group
 				label(for="city") City
-				input.form-control(type="text" id="city" name="city" required)
+				input.form-control(type="text" id="city" name="city" value=body.city required)
 			.form-group
 				label(for="state") State
-				input.form-control(type="text" id="state" name="state" required)
+				input.form-control(type="text" id="state" name="state" value=body.state required)
 
 			//- These form elements are not required
 			.form-group
 				label(for="interests") Likes
-				input.form-control(type="text" id="interests" name="interests")
+				input.form-control(type="text" id="interests" name="interests" value=body.interests)
 			.form-group
 				label(for="aversions") Dislikes
-				input.form-control(type="text" id="aversions" name="aversions")
+				input.form-control(type="text" id="aversions" name="aversions" value=body.aversions)
 			.form-group
 				label(for="bio") About me
-				textarea.form-control(type="text" id="bio" name="bio" required)
+				textarea.form-control(type="text" id="bio" name="bio" value=body.bio required)
 
 			button(type="submit" class="btn btn-default") Register
 		a(href="/login") Already have an account?

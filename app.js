@@ -8,6 +8,8 @@ const app = express()
 const routes = require('./routes/')
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const flash = require('express-flash');
 const passport = require('passport');
 const KnexSessionStore = require('connect-session-knex')(session);
 const {knex} = require('./db/database');
@@ -17,9 +19,12 @@ const port = process.env.PORT || 3000
 
 app.set('view engine', 'pug')
 
-// Middleware
 
+app.locals.body = {};
+// Middleware
+app.use(cookieParser('secretlove'));
 app.use(session({cookie: {maxAge: 60000}, secret: 'secretlove', resave: true, saveUninitialized: false}))
+app.use(flash());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
   store: new KnexSessionStore({

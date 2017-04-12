@@ -15,6 +15,7 @@ module.exports.create = (req, res, err) => {
   if (password !== req.body.password_confirm) {
     console.log(`I'm reloading the page because passwords don't match!`)
     let body = req.body;
+    let err = "passwords don't match!";
     res.render('registration', {page: 'Registration', err, body})
     return
   }
