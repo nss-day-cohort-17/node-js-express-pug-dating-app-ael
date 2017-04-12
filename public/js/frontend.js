@@ -12,4 +12,4 @@ $('.icon').click((e) => {
     $(`#${clickedID} .card-like-sect`).replaceWith(`<div class="card-like-sect"><a class="icon"><img class="icon-like" src="/img/heart-white.png" alt="icon"/></a></div>`);
   }
 
-})
+})  
