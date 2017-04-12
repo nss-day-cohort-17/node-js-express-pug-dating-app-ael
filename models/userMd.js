@@ -35,10 +35,3 @@ const User = bookshelf.Model.extend({
 bookshelf.model('User', User)
 
 module.exports = {User}
-
-
-
-
-
-
-
