@@ -2,10 +2,6 @@ body {
   padding-top: 100px;
 }
 
-
-
-
-
 .user-profile {
   margin-top: 20px;
   padding: 3%;
@@ -54,4 +50,9 @@ body {
 
 .card-info-sect {
   margin: 2%;
+}
+
+.icon {
+  height: 50px;
+  color: red;
 }

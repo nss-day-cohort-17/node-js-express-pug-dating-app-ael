@@ -13,11 +13,14 @@ block content
     h5 Interests: Sales
     h5 Aversions: Research and Development
 
-
   div.profile-feed
 
     each user in users
       .card
+        if liked
+          img.icon(src=`/img/add-to-favourites.png` alt="icon")
+        else 
+          a like
         .card-img-sect
           img.card-img(src=user.image)
         .card-info-sec
@@ -27,8 +30,3 @@ block content
             p Available
           else
             p Not available
-
-
-
-
-
