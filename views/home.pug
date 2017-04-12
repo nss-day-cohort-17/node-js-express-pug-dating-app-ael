@@ -3,30 +3,34 @@ extends partials/layout.pug
 block content
   div.user-profile
 
-    img.user-img(src=`http://i.imgur.com/8KEdZt9.gif`)
-    h1 Jonathon Doe
-    h3 Nashville, TN
-    p generate e-business e-services
+    img.user-img(src=currentUser.image)
+    h1 #{currentUser.first_name} #{currentUser.last_name}
+    h3 #{currentUser.city} #{currentUser.state}
+    p #{currentUser.bio}
 
-    p Available
+    if currentUser.available
+      p Available
+    else
+      p Not available
 
-    h5 Interests: Sales
-    h5 Aversions: Research and Development
+    h5 Interests: #{currentUser.interests}
+    h5 Aversions: #{currentUser.aversions}
 
 
   div.profile-feed
 
     each user in users
-      .card
-        .card-img-sect
-          img.card-img(src=user.image)
-        .card-info-sec
-          h3 #{user.first_name} #{user.last_name}
-          h4 #{user.city}, #{user.state}
-          if user.available
-            p Available
-          else
-            p Not available
+      if user.id !== currentUser.id
+        .card
+          .card-img-sect
+            img.card-img(src=user.image)
+          .card-info-sec
+            h3 #{user.first_name} #{user.last_name}
+            h4 #{user.city}, #{user.state}
+            if user.available
+              p Available
+            else
+              p Not available
 
 
 
