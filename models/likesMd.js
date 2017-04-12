@@ -31,10 +31,18 @@ const Like = bookshelf.Model.extend({
 			console.log('catch in the findLikedUser');
 			return (null);
 		})
-
+	},
+	// Sees if like exists for given user_id and liked_user_id
+	// Returns promise that resolves to true or false
+	seeIfLikeExists: function(user_id, liked_user_id) {
+		return Like.forge().query({where: {user_id, liked_user_id}}).fetch()
+		.then(data => {return (data ? true : false)})
+	},
+	addLike: function(user_id, liked_user_id) {
+		return Like.forge({user_id, liked_user_id}).save()
+			.then(data => data)
 	}
-}
-)
+})
 bookshelf.model('Like', Like)
 
 module.exports = {Like}
