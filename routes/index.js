@@ -22,6 +22,7 @@ router.use((req, res, next)=>{
 
 
 
+router.use(require('./logoutRt'))
 
 router.use(require('./homeRt'));
 router.use(require('./likedRt'));
