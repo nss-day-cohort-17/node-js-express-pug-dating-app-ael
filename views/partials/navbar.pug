@@ -15,7 +15,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top
             a(href='/liked') Liked
 
           if email
-            li: a(href="/logout") Logged in as #{email}
+            li: a(href="/logout-confirm") Log out
+            li.disabled: a Logged in as #{email}
           else
             li(class={ active: page === 'Login' })
               a(href="/login") Login
