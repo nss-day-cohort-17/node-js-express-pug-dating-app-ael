@@ -16,4 +16,4 @@ module.exports.create = (req, res, next) =>
       if(err) return next(err)
       res.redirect('/home')
     })
-})(req, res, next)
+  })(req, res, next)

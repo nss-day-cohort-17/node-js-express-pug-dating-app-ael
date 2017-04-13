@@ -1,7 +1,9 @@
 'use strict'
 
 const {User} = require('../models/userMd.js');
-const {knex, bookshelf} = require('../db/database.js')
+const {knex, bookshelf} = require('../db/database.js');
+const passport = require('passport');
+
 
 module.exports.show = (req, res) => {
   res.render('registration', {page: 'Registration'});
@@ -18,12 +20,19 @@ module.exports.create = (req, res, err) => {
     return
   }
   let available = true;
-  User.forge({email, password, first_name, last_name, image, city, state, interests, aversions, bio, available
+  return User.forge({email, password, first_name, last_name, image, city, state, interests, aversions, bio, available
   })
   .save()
-  .then(function () {
+  .then(function (user) {
+    req.login(user, (err) => {
+      if (!err) {
 
-    res.redirect('/home');
+        res.redirect('/home');
+      } else {
+
+        console.log(err);
+      }
+    })
   })
   //if it doesn't work
   .catch((err) => {
