@@ -1,12 +1,18 @@
 'use strict'
 
-const { bookshelf } = require('../db/database.js')
+const { bookshelf } = require('../db/database.js');
+const {compare} = require('bcryptjs');
+
 
 // Todo: add bcrypt password hashing to model
 // Todo: add find user by email method
 // Todo: add compare password method
 const User = bookshelf.Model.extend({
 	tableName: 'users',
+	bcrypt: {field: 'password'},
+	comparePassword : function (passwordStr) {
+		return compare(passwordStr, this.attributes.password);
+	},
 
 	userIds: function() {
 		// The primary key in this table belongs
@@ -30,7 +36,19 @@ const User = bookshelf.Model.extend({
 	getCurrentUser: function(id) {
 		return User.forge().query({where: {id}}).fetch()
 			.then(model => model.toJSON())
+	},
+	//take an argument of email
+	//returns a user that matches that email
+	findOneByEmail: function(email) {
+		return User.forge({email}).fetch()
+			.then((user)=> {
+				return user;
+			})
+			.catch(()=>{
+				return null;
+			})
 	}
+
 })
 bookshelf.model('User', User)
 
