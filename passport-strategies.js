@@ -22,15 +22,12 @@ const localStrategy = new Strategy({
   (email, passwordStr, done) => {
     User.findOneByEmail(email)
     .then((user)=>{
-      console.log("user in findOneByEmail", user)
       if (user) {
         return Promise.all([user, user.comparePassword(passwordStr)])
       }
       done(null, null, {msg: `You're not in our system yet.  Try creating an account`})
     })
     .then(([user, matches]) => {
-      console.log("user in then", user);
-      console.log("matches in then", matches);
       if (matches) {
         done(null, user, {msg: `Welcome back!`})
       } else {
