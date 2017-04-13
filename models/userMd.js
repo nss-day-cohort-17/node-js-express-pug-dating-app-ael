@@ -11,7 +11,9 @@ const User = bookshelf.Model.extend({
 	tableName: 'users',
 	bcrypt: {field: 'password'},
 	comparePassword : function (passwordStr) {
-		return compare(passwordStr, User.attributes.password);
+		console.log('this', this);
+		console.log('passwordStr', passwordStr);
+		return compare(passwordStr, this.attributes.password);
 	},
 
 	userIds: function() {
