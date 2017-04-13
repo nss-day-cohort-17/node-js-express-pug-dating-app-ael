@@ -5,8 +5,8 @@ html
 		link(rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.css')
 		link(rel='stylesheet' href='/css/main.css')
 	body
-		
-		include navbar.pug
+		if noNave
+			include navbar.pug
 		.container
 
 			block content
