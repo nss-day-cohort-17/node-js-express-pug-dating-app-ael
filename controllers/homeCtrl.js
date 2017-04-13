@@ -3,9 +3,11 @@
 const { User } = require('../models/userMd')
 const { Like } = require('../models/likesMd')
 
-const CURRENT_USER_ID = 1
+
 
 module.exports.show = (req, res) => {
+	let CURRENT_USER_ID = req.user.id;
+		console.log("req.user", req.user)
 	Promise.all([
 		User.getCurrentUser(CURRENT_USER_ID),
 		User.getUsers(),
@@ -17,6 +19,7 @@ module.exports.show = (req, res) => {
 }
 
 module.exports.create = (req, res) => {
+	let CURRENT_USER_ID = req.user.id;
 	const {liked_user_id} = req.body
 	Like.forge({user_id: CURRENT_USER_ID, liked_user_id}).save()
 		.then(model => {
@@ -25,6 +28,7 @@ module.exports.create = (req, res) => {
 }
 
 module.exports.remove = (req, res) => {
+	let CURRENT_USER_ID = req.user.id;
 	const {liked_user_id} = req.body
 	console.log('delete happened')
 	Like.forge({user_id: CURRENT_USER_ID, liked_user_id})
@@ -35,9 +39,3 @@ module.exports.remove = (req, res) => {
 			res.end()
 		})
 }
-
-
-
-
-
-
