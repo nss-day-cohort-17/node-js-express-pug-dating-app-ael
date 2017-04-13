@@ -8,3 +8,7 @@ module.exports.destroy = (req, res) => {
     req.logout()
     res.redirect('/login')
 }
+
+module.exports.show = (req, res) => {
+	res.render('logout-confirm')
+}
