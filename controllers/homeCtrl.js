@@ -7,7 +7,6 @@ const { Like } = require('../models/likesMd')
 
 module.exports.show = (req, res) => {
 	let CURRENT_USER_ID = req.user.id;
-		console.log("req.user", req.user)
 	Promise.all([
 		User.getCurrentUser(CURRENT_USER_ID),
 		User.getUsers(),
