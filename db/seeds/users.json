@@ -25,7 +25,7 @@
 }, {
   "email": "ben@example.com",
   "password": "0PhMxHvaLMN",
-  "available": false,
+  "available": true,
   "interests": "Snarky comments, ecommerce, looking off meaningfully in the distance just to mess with people",
   "aversions": "90's cartoons, conventional office desks, poison arrow tree frogs",
   "image": "/img/class/ben.png",
@@ -37,7 +37,7 @@
 }, {
   "email": "billy@example.com",
   "password": "VHPwkl",
-  "available": false,
+  "available": true,
   "interests": "Beetz, Quinoa, Donuts",
   "aversions": "Places that don't like donuts",
   "image": "/img/class/billy.png",
@@ -61,7 +61,7 @@
 }, {
   "email": "jameswest@example.com",
   "password": "z86xouN",
-  "available": false,
+  "available": true,
   "interests": "Ping Pong, Melrose, Beer",
   "aversions": "No ping-pong, not going to Melrose, no beer",
   "image": "/img/class/jameswest.png",
@@ -73,7 +73,7 @@
 }, {
   "email": "jamesweir6@trellian.com",
   "password": "kTPUV4w",
-  "available": false,
+  "available": true,
   "interests": "Cyling, putting up with noisy classmates, statements on his t-shirts",
   "aversions": "Noisy Classmates",
   "image": "/img/class/jamesw.png",
@@ -121,7 +121,7 @@
 }, {
   "email": "jufe@example.com",
   "password": "Zn9Yma5OY",
-  "available": false,
+  "available": true,
   "interests": "75K",
   "aversions": "less than 75K",
   "image": "/img/class/jufe.png",
@@ -145,7 +145,7 @@
 }, {
   "email": "michael@example.com",
   "password": "PtpsXFSx",
-  "available": false,
+  "available": true,
   "interests": "Outdoors, comedic timing",
   "aversions": "overly serious people.  They're jerks",
   "image": "/img/class/michael.png",
@@ -169,7 +169,7 @@
 }, {
   "email": "priya@example.com",
   "password": "OsxMyOA5z",
-  "available": false,
+  "available": true,
   "interests": "Coding, her son, making awesome food every morning",
   "aversions": "People asking odd questions at demo day",
   "image": "/img/class/priya.png",
@@ -181,7 +181,7 @@
 }, {
   "email": "robert@example.com",
   "password": "b9L2VfpyOjz",
-  "available": false,
+  "available": true,
   "interests": "Practical Jokes, Counting Ums, Nerf Guns",
   "aversions": "Specific heights",
   "image": "/img/class/robert.png",
@@ -193,7 +193,7 @@
 }, {
   "email": "tambo@example.ch",
   "password": "xPi5xEc8j",
-  "available": false,
+  "available": true,
   "interests": "Long walks on the beach, sunsets, butterflies",
   "aversions": "Serious moments",
   "image": "/img/class/tambo.png",
@@ -205,7 +205,7 @@
 }, {
   "email": "terrell@example.com",
   "password": "OeiYMtvQA",
-  "available": false,
+  "available": true,
   "interests": "March Madness, beating traffic with early morning commutes, Web Scraping",
   "aversions": "morning traffic, newts",
   "image": "/img/class/terrell.png",
@@ -241,7 +241,7 @@
 }, {
   "email": "eventbrite@example.edu",
   "password": "xcI18YN",
-  "available": false,
+  "available": true,
   "interests": "Events, Concerts, Digital",
   "aversions": "Events without tickets",
   "image": "https://tctechcrunch2011.files.wordpress.com/2014/06/eventbrite_1.jpg?w=700&h=400&crop=1",
@@ -253,7 +253,7 @@
 }, {
   "email": "8thday@example.com",
   "password": "STpObc7M",
-  "available": false,
+  "available": true,
   "interests": "Rural, healthcare, life/work balance",
   "aversions": "Big Cities",
   "image": "https://pbs.twimg.com/profile_images/710120099257131008/MKWna-xH_400x400.jpg",
@@ -277,7 +277,7 @@
 }, {
   "email": "Joe@example.com",
   "password": "Mg9y58K",
-  "available": false,
+  "available": true,
   "interests": "Pizza Shack, Monkeys, Chickens, Bill Murray movie references",
   "aversions": "Deliverying",
   "image": "http://nashvillesoftwareschool.com/images/instructors/joe.jpg",
