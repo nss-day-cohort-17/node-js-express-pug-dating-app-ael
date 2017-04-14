@@ -3,7 +3,7 @@ extends partials/layout.pug
 block content
 	.row
 		.col-md-6.col-md-offset-3
-			h1.text-center Create Profile
+			h1.text-center.info-heading Create Profile
 			if err
 				h4= err.message
 			form(method="POST")
@@ -60,7 +60,7 @@ block content
 					label(for="bio") About me
 					input.form-control(type="text" id="bio" name="bio" value=body.bio)
 
-				button.btn.btn-primary.btn-block(type="submit") Register
+				button.btn.btn-block.btn-two(type="submit") Register
 			a.pull-right(href="/login") Already have an account?
 			p * required
 
