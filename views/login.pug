@@ -3,16 +3,18 @@ extends partials/layout.pug
 block content
   .heading
     h1 Login
+    if msg
+      h4=msg.msg
   .login-form
     form(method="POST")
 
       .form-group
         label(for="email") Email
-        input.form-control#email(type="email" name="email" placeholder="you@example.com" required)
+        input.form-control#email(type="email" name="email" placeholder="you@example.com" value=body.email required)
 
       .form-group
         label(for="password") password
-        input.form-control#password(type="password" name="password" placeholder="***********" required)
+        input.form-control#password(type="password" name="password" placeholder="***********" value=body.password required)
 
       .contact-form-submit
         a.btn.btn-danger.btn-lg(href='/') Cancel

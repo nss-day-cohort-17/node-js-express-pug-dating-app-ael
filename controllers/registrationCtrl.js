@@ -13,9 +13,9 @@ module.exports.create = (req, res, err) => {
 
   let {body: {email, password, first_name, last_name, image, city, state, interests, aversions, bio}} = req;
   if (password !== req.body.password_confirm) {
-    console.log(`I'm reloading the page because passwords don't match!`)
     let body = req.body;
-    let err = "passwords don't match!";
+    let err = {};
+    err.message = "passwords don't match!";
     res.render('registration', {page: 'Registration', err, body})
     return
   }
@@ -41,6 +41,12 @@ module.exports.create = (req, res, err) => {
     .then((err)=> {
 
       let body = req.body;
+      if(err.code === '23505') {
+        err.message = 'That email is already in our system.  Please use our log in page.'
+      } else {
+        err.message = 'Oops, something went wrong.  Please review you form and try again.'
+      }
+      console.log(err)
       res.render('registration', {page: 'Registration', err, body})
     })
   })
