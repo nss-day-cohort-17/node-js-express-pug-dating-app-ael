@@ -25,7 +25,6 @@ body {
 
 .sub-header{
   color: #520152;
-
 }
 
 .button-row {
@@ -51,8 +50,9 @@ body {
 }
 
 .info-sect {
-  height: 700px;
-  padding: 10%;
+  min-height: 450px;
+  padding: 5% 10%;
+  border-top: 2px solid #520152;
 }
 
 .info-sect > * {
@@ -60,13 +60,24 @@ body {
 }
 
 .info-heading {
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .founder-img {
+  height: 250px;
   float: right;
   border-radius: 50%;
-  height: 200px;
+}
+
+.step {
+  background-color: rgba(255, 164, 0, .5);
+  padding: 3% 5%;
+  margin: 3% 0
+}
+
+.larger-txt {
+  font-weight: 900;
+  font-size: 4em;
 }
 
 /*------------------- HOME PAGE -----------------------*/
