@@ -52,7 +52,7 @@
   "available": true,
   "interests": "Titans, Preds, good coffee, his dog, air horn sound effects",
   "aversions": "Dumb people, bad coffee, the NASDAQ",
-  "image": "/img/class/charlie",
+  "image": "/img/class/charlie.png",
   "first_name": "Charlie",
   "last_name": "Crocker",
   "city": "Nashville",
@@ -112,7 +112,7 @@
   "available": true,
   "interests": "Coffee, Data Science, Computers",
   "aversions": "Coffee, Data Science, Computers",
-  "image": "http://dummyimage.com/104x219.jpg/ff4444/ffffff",
+  "image": "/img/class/joel.png",
   "first_name": "Joel",
   "last_name": "O'Legg",
   "city": "Spring Hill",
@@ -220,7 +220,7 @@
   "available": true,
   "interests": "Rasberry Pi, Ping Pong, Linex, getting a mac before demo day",
   "aversions": "Taking away his Ping Pong, ",
-  "image": "/img/class/westley",
+  "image": "/img/class/westley.png",
   "first_name": "Westley",
   "last_name": "Isbell",
   "city": "South of Town",
@@ -256,7 +256,7 @@
   "available": false,
   "interests": "Rural, healthcare, life/work balance",
   "aversions": "Big Cities",
-  "image": "https://pbs.twimg.com/profile_images/710120099257131008/MKWna-xH_400x400.jpgf",
+  "image": "https://pbs.twimg.com/profile_images/710120099257131008/MKWna-xH_400x400.jpg",
   "first_name": "Eighth",
   "last_name": "Daye",
   "city": "Winchester",
@@ -285,5 +285,5 @@
   "last_name": "Shack",
   "city": "Nashville",
   "state": "TN",
-  "bio": "Pizza Shack is a service oriented outreach effort to offer incarcerated individuals the opportunity to return to normal pizza ordering activities while still behind bars.  Their fufillmentless ordering system allows seemless internation into any prison facility."
+  "bio": "Pizza Shack is a service oriented outreach effort to offer incarcerated individuals the opportunity to return to normal pizza ordering activities while still behind bars."
 }]
