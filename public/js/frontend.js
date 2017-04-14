@@ -11,7 +11,7 @@ $('.card').on("click", function(e) {
     $(`#${clickedID.id} .card-like-sect`).replaceWith(`<div class="card-like-sect"><a class="icon"><img class="icon-heart" src="/img/heart-red.png" alt="icon"/></a></div>`);
 		$.post('/home', {liked_user_id: e.currentTarget.id})
   } else {
-    $(`#${clickedID.id} .card-like-sect`).replaceWith(`<div class="card-like-sect"><a class="icon"><img class="icon-like" src="/img/heart-white.png" alt="icon"/></a></div>`);
+    $(`#${clickedID.id} .card-like-sect`).replaceWith(`<div class="card-like-sect"><a class="icon"><img class="icon-like" src="/img/heart-grey.png" alt="icon"/></a></div>`);
     $.ajax({
     	url: '/home',
     	type: 'DELETE',
