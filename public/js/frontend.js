@@ -1,6 +1,7 @@
 console.log('*********** CLICK SOMEBODY - START A RELATIONSHIP ***********');
 
 $('.card').on("click", function(e) {
+  if(e.target.className === "card-img") return
   // stores parent card
   let clickedID = e.currentTarget;
   let currentIconClass = clickedID.lastChild.childNodes[0].childNodes[0].className;
