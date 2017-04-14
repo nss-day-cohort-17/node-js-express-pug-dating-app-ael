@@ -17,6 +17,10 @@ body {
   padding: 10%;
 }
 
+.page-margin {
+  margin-top: 150px;
+}
+
 .main-banner {
   font-weight: 900;
   font-size: 6em;
