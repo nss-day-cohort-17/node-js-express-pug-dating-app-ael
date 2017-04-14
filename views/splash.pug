@@ -1,6 +1,26 @@
-extends partials/layout.pug
-
-block content
-	h1.text-center Splash
-	img.center-block.img-responsive(src="https://img.clipartfest.com/fa3fa1247e70b49f0f5979270f868b78_color-splash-green-colors-and-water-splash-texture-sheet-clipart_6000-3736.jpeg" style="width: 500px;")
-	
+doctype html
+html
+	head
+		title
+		link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Muli:300,400,900")
+		link(rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet' href='/css/main.css')
+	body
+		
+		.main-header
+			h1.text-center.main-banner CAREER CUPID
+			h3.text-center.sub-header click some body - start a relationship
+			.button-row
+				a(type="button" href="/login").btn.btn-lg.login-btn Login
+				a(type="button" href="/registration").btn.btn-lg.register-btn Register
+		.info-sect
+			h2.info-heading The Man Behind Career Cupid
+			h4.sub-header Dr. Michael Tambo, Founder
+			.row
+			p.col-xs-8 Dr. Tambo is a clinical psychologist and author of eight books on love, compatibility and emotional sophistication. During 35 years of counseling thousands of married couples, Dr. Tambo observed a set of characteristics that seemed to be present in all successful relationships. He called them the 29 Dimensions of Compatibility. After extensive research involving thousands of married couples, Dr. Tambo confirmed that these dimensions were indeed highly predictive of relationship success and could be used to match singles. Ten years later, eHarmony's compatibility matching is responsible for nearly 4% of U.S. marriages.*
+			.col-xs-4
+				img.founder-img(src="/img/tambo_720.png")
+		.info-sect
+		script(src='/lib/jquery/dist/jquery.js')
+		script(src='/lib/bootstrap/dist/js/bootstrap.js')
+		script(src='/js/frontend.js')

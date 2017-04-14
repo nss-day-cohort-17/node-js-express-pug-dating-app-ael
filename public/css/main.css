@@ -1,6 +1,75 @@
+/*COLORS*/
+/*Rasberry: #9e0062;
+Lemonade: #f8c278;
+Purple: #520152;
+Gold: #ffa400;*/
+
 body {
-  padding-top: 100px;
+    font-family: 'Muli', sans-serif;
 }
+
+/*------------------- SPLASH PAGE -----------------------*/
+
+.main-header {
+  /*background: url("http://thevidaconsultancy.com/wp-content/uploads/2016/08/love.png");*/
+  height: 700px;
+  background: linear-gradient(#9e0062, #f8c278);
+  padding: 10%;
+}
+
+.main-banner {
+  font-weight: 900;
+  font-size: 6em;
+  color: #fff;
+}
+
+.sub-header{
+  color: #520152;
+
+}
+
+.button-row {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.login-btn,
+.register-btn {
+  text-transform: uppercase;
+  background-color: white;
+  color: #520152;
+  font-weight: 600;
+  margin: 0 2%;
+  width: 150px;
+}
+.login-btn:hover ,
+.register-btn:hover {
+  text-transform: uppercase;
+  background-color: white;
+  color: #ffa400;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.info-sect {
+  height: 700px;
+  padding: 10%;
+}
+
+.info-sect > * {
+  color: #520152;
+}
+
+.info-heading {
+  font-weight: 600;
+}
+
+.founder-img {
+  float: right;
+  border-radius: 50%;
+  height: 200px;
+}
+
+/*------------------- HOME PAGE -----------------------*/
 
 .user-profile {
   margin-top: 20px;
