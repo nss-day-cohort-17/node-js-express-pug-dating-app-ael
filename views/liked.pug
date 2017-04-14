@@ -12,7 +12,7 @@ block content
         each user in users
           .col-sm-6.col-md-4
             .thumbnail
-              img(src=user.image alt=`${user.first_name} image`)
+              a(href=`/profile/${user.id}`): img(src=user.image alt=`${user.first_name} image`)
               .caption
                 .Thumbnail.label
                 h3 #{user.first_name} #{user.last_name}

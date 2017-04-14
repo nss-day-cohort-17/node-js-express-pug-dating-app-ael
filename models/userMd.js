@@ -37,6 +37,10 @@ const User = bookshelf.Model.extend({
 		return User.forge().query({where: {id}}).fetch()
 			.then(model => model.toJSON())
 	},
+	getUserById: function(id) {
+		return User.forge().query({where: {id}}).fetch()
+			.then(model => model.toJSON())
+	},
 	//take an argument of email
 	//returns a user that matches that email
 	findOneByEmail: function(email) {

@@ -13,6 +13,11 @@ body {
   background: linear-gradient(lightgrey, darkgrey);
 }
 
+.user-profile__single {
+  margin-top: 20px;
+  background: linear-gradient(lightgrey, darkgrey);
+}
+
 .user-img {
   width: 100%;
   border: 5px solid lightgrey;

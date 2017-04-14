@@ -22,7 +22,7 @@ block content
       if user.id !== currentUser.id
         .card(id=user.id)
           .card-img-sect
-            img.card-img(src=user.image)
+            a(href=`/profile/${user.id}`): img.card-img(src=user.image)
           .card-info-sec
             h3 #{user.first_name} #{user.last_name}
             h4 #{user.city}, #{user.state}
@@ -37,4 +37,5 @@ block content
             else
               a.icon
                 img.icon-like(src=`/img/heart-white.png` alt="icon")
+
 

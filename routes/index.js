@@ -23,7 +23,7 @@ router.use((req, res, next)=>{
 
 
 router.use(require('./logoutRt'))
-
+router.use(require('./profileRt'))
 router.use(require('./homeRt'));
 router.use(require('./likedRt'));
 
