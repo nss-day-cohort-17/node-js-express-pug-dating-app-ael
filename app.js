@@ -23,7 +23,7 @@ app.set('view engine', 'pug')
 app.locals.body = {};
 // Middleware
 app.use(cookieParser('secretlove'));
-app.use(session({cookie: {maxAge: 60000}, secret: 'secretlove', resave: true, saveUninitialized: false}))
+app.use(session({cookie: {maxAge: 100000}, secret: 'secretlove', resave: true, saveUninitialized: false}))
 app.use(flash());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
