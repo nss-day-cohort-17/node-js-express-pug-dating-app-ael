@@ -10,5 +10,6 @@ module.exports.destroy = (req, res) => {
 }
 
 module.exports.show = (req, res) => {
-	res.render('logout-confirm')
+	const currentUser = req.user
+	res.render('logout-confirm', {currentUser})
 }
