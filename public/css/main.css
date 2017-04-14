@@ -5,7 +5,16 @@ Purple: #520152;
 Gold: #ffa400;*/
 
 body {
-    font-family: 'Muli', sans-serif;
+  font-family: 'Muli', sans-serif;
+  color: #520152;
+}
+
+a {
+  color: #ffa400;
+}
+
+a:hover {
+  color: #ffa400;
 }
 
 /*------------------- SPLASH PAGE -----------------------*/
@@ -84,6 +93,36 @@ body {
   font-size: 4em;
 }
 
+/*------------------- NAVBAR -----------------------*/
+
+.navbar {
+  background-color: #9e0062;
+
+}
+
+.navbar-nav > li > a {
+  background-color: #9e0062;
+  color: #fff;
+
+}
+.navbar-nav > li > a:hover {
+  background-color: #9e0062;
+  font-weight: 900;
+
+}
+
+.navbar-brand {
+  padding: 9%;
+  font-size: 2em;
+  margin-left: 10px;
+  color: #fff;
+}
+.navbar-brand:hover {
+  margin-left: 10px;
+  color: #fff;
+}
+
+
 /*------------------- HOME PAGE -----------------------*/
 
 .user-profile {
@@ -94,17 +133,19 @@ body {
   float: left;
   display: flex;
   flex-flow: column;
-  background: linear-gradient(lightgrey, darkgrey);
+  background: linear-gradient(#9e0062, #f8c278);
+  color: white;
 }
 
 .user-profile__single {
   margin-top: 20px;
-  background: linear-gradient(lightgrey, darkgrey);
+  margin-bottom: 50px;
+
 }
 
 .user-img {
   width: 100%;
-  border: 5px solid lightgrey;
+  border: 5px solid #fff;
 
 }
 
@@ -118,7 +159,6 @@ body {
 }
 
 .card {
-  background-color: lightgrey;
   padding: 1%;
   margin: 1% 0;
   display: flex;
@@ -132,7 +172,7 @@ body {
 
 .card-img {
   height: 100px;
-  border: 5px solid darkgrey;
+  border: 1px solid #9e0062;
   float: left;
   flex-grow: 1;
 }
@@ -145,4 +185,51 @@ body {
 .icon-like {
   height: 50px;
   float: right;
+}
+
+
+/*------------------- LIKES PAGE -----------------------*/
+
+
+.jumbotron {
+  background-color: white;
+}
+.caption > * {
+  color: #520152;
+}
+
+.thumbnail {
+  border: 2px solid  #9e0062;
+}
+
+.btn-two {
+  padding: 2%;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  background-color: #ffa400;
+  margin: 5% 0 ;
+  color: #fff;
+}
+
+.btn-two:hover {
+  background-color: #9e0062;
+  color: #fff;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.btn-three {
+  padding: 2%;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  background-color: #fff;
+  margin: 2% 0 ;
+  color: #9e0062;
+}
+
+.btn-three:hover {
+  background-color: #9e0062;
+  color: #fff;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
 }
