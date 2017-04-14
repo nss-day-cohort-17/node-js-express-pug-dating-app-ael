@@ -1,0 +1,24 @@
+nav.navbar.navbar-fixed-top
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle="collapse", data-target="#navbar")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.info-heading(href='/') CAREER CUPID
+
+      #navbar.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li(class={active: page === 'Home' })
+            a(href='/home') Home
+          li(class={active: page === 'Liked'})
+            a(href='/liked') Liked
+
+          if email
+            li: a(href="/logout-confirm") Log out
+            li.disabled: a Logged in as #{email}
+          else
+            li(class={ active: page === 'Login' })
+              a(href="/login") Login
+            li(class={ active: page === 'Register' })
+              a(href="/registration") Register

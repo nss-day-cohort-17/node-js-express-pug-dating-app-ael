@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+		title
+		link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Muli:300,400,900")
+		link(rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet' href='/css/main.css')
+	body
+		
+		include navbar.pug
+			
+		.container
+			.page-margin
+			block content
+
+		script(src='/lib/jquery/dist/jquery.js')
+		script(src='/lib/bootstrap/dist/js/bootstrap.js')
+		script(src='/js/frontend.js')

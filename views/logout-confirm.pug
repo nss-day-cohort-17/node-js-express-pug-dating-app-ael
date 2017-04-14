@@ -1,0 +1,11 @@
+extends partials/layout.pug
+
+block content
+	.row
+		.col-md-6.col-md-offset-3
+			h1.text-center Are you sure you want to log out, #{currentUser.first_name} #{currentUser.last_name}?
+
+			img.img-responsive(src="img/sad-robot.jpeg")
+
+			a.btn.btn-three.btn-lg.pull-right(href="/logout") Log out
+			a.btn.btn-three.btn-lg.pull-right(href="/home") Return home

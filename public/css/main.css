@@ -1,0 +1,235 @@
+/*COLORS*/
+/*Rasberry: #9e0062;
+Lemonade: #f8c278;
+Purple: #520152;
+Gold: #ffa400;*/
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #520152;
+}
+
+a {
+  color: #ffa400;
+}
+
+a:hover {
+  color: #ffa400;
+}
+
+/*------------------- SPLASH PAGE -----------------------*/
+
+.main-header {
+  /*background: url("http://thevidaconsultancy.com/wp-content/uploads/2016/08/love.png");*/
+  height: 700px;
+  background: linear-gradient(#9e0062, #f8c278);
+  padding: 10%;
+}
+
+.page-margin {
+  margin-top: 150px;
+}
+
+.main-banner {
+  font-weight: 900;
+  font-size: 6em;
+  color: #fff;
+}
+
+.sub-header{
+  color: #520152;
+}
+
+.button-row {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.login-btn,
+.register-btn {
+  text-transform: uppercase;
+  background-color: white;
+  color: #520152;
+  font-weight: 600;
+  margin: 0 2%;
+  width: 150px;
+}
+.login-btn:hover ,
+.register-btn:hover {
+  text-transform: uppercase;
+  background-color: white;
+  color: #ffa400;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.info-sect {
+  min-height: 450px;
+  padding: 5% 10%;
+  border-top: 2px solid #520152;
+}
+
+.info-sect > * {
+  color: #520152;
+}
+
+.info-heading {
+  font-weight: 900;
+}
+
+.founder-img {
+  height: 250px;
+  float: right;
+  border-radius: 50%;
+}
+
+.step {
+  background-color: rgba(255, 164, 0, .5);
+  padding: 3% 5%;
+  margin: 3% 0
+}
+
+.larger-txt {
+  font-weight: 900;
+  font-size: 4em;
+}
+
+/*------------------- NAVBAR -----------------------*/
+
+.navbar {
+  background-color: #9e0062;
+
+}
+
+.navbar-nav > li > a {
+  background-color: #9e0062;
+  color: #fff;
+
+}
+.navbar-nav > li > a:hover {
+  background-color: #9e0062;
+  font-weight: 900;
+
+}
+
+.navbar-brand {
+  padding: 9%;
+  font-size: 2em;
+  margin-left: 10px;
+  color: #fff;
+}
+.navbar-brand:hover {
+  margin-left: 10px;
+  color: #fff;
+}
+
+
+/*------------------- HOME PAGE -----------------------*/
+
+.user-profile {
+  margin-top: 20px;
+  padding: 3%;
+  height: 100%;
+  width: 33%;
+  float: left;
+  display: flex;
+  flex-flow: column;
+  background: linear-gradient(#9e0062, #f8c278);
+  color: white;
+}
+
+.user-profile__single {
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+}
+
+.user-img {
+  width: 100%;
+  border: 5px solid #fff;
+
+}
+
+.profile-feed {
+  margin-top: 20px;
+  height: 100%;
+  width: 66%;
+  padding: 0 5%;
+  float: right;
+
+}
+
+.card {
+  padding: 1%;
+  margin: 1% 0;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.card-img-sect {
+  margin: 2%;
+
+}
+
+.card-img {
+  height: 100px;
+  border: 1px solid #9e0062;
+  float: left;
+  flex-grow: 1;
+}
+
+.card-info-sect {
+  margin: 2%;
+}
+
+.icon-heart,
+.icon-like {
+  height: 50px;
+  float: right;
+}
+
+
+/*------------------- LIKES PAGE -----------------------*/
+
+
+.jumbotron {
+  background-color: white;
+}
+.caption > * {
+  color: #520152;
+}
+
+.thumbnail {
+  border: 2px solid  #9e0062;
+}
+
+.btn-two {
+  padding: 2%;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  background-color: #ffa400;
+  margin: 5% 0 ;
+  color: #fff;
+}
+
+.btn-two:hover {
+  background-color: #9e0062;
+  color: #fff;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.btn-three {
+  padding: 2%;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  background-color: #fff;
+  margin: 2% 0 ;
+  color: #9e0062;
+}
+
+.btn-three:hover {
+  background-color: #9e0062;
+  color: #fff;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.5);
+}

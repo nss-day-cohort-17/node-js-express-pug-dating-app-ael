@@ -1,0 +1,23 @@
+extends partials/layout.pug
+
+block content
+  .row
+    .col-md-6.col-md-offset-3
+      h1.text-center.info-heading Login
+      if msg
+        h4=msg.msg
+      .login-form
+        form(method="POST")
+
+          .form-group
+            label(for="email") Email
+            input.form-control#email(type="email" name="email" placeholder="you@example.com" value=body.email required)
+
+          .form-group
+            label(for="password") password
+            input.form-control#password(type="password" name="password" placeholder="***********" value=body.password required)
+
+          .contact-form-submit
+            input.btn.btn-lg.pull-right.login-btn(type="submit" value="Submit")
+            a.btn.login-btn.btn-lg.pull-right(href='/') Cancel
+        a(href="/registration") Don't have an account?
