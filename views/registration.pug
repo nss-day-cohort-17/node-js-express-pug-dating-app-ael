@@ -1,49 +1,68 @@
 extends partials/layout.pug
 
 block content
-		h1.text-center Create Profile
-		if err
-			h4= err.message
-		form(method="POST")
-			.form-group
-				label(for="email") Email
-				input.form-control(type="email" id="email" name="email" value=body.email required)
-			.form-group
-				label(for="password") Password
-				input.form-control(type="password" id="password" name="password" value=body.password required)
-			.form-group
-				label(for="password_confirm") Confirm password
-				input.form-control(type="password" id="password_confirm" name="password_confirm" value=body.password_confirm required)
+	.row
+		.col-md-6.col-md-offset-3
+			h1.text-center Create Profile
+			if err
+				h4= err.message
+			form(method="POST")
+				.form-group
+					label(for="email")
+						sup *
+						| Email
+					input.form-control(type="email" id="email" name="email" value=body.email required)
+				.form-group
+					label(for="password")
+						sup *
+						| Password
+					input.form-control(type="password" id="password" name="password" value=body.password required)
+				.form-group
+					label(for="password_confirm")
+						sup *
+						| Confirm password
+					input.form-control(type="password" id="password_confirm" name="password_confirm" value=body.password_confirm required)
 
-			.form-group
-				label(for="first_name") First name
-				input.form-control(type="text" id="first_name" name="first_name" value=body.first_name required)
-			.form-group
-				label(for="last_name") Last name
-				input.form-control(type="text" id="last_name" name="last_name" value=body.last_name required)
-			.form-group
-				label(for="image") Image url
-				input.form-control(type="text" id="image" name="image" value=body.image required)
-			.form-group
-				label(for="city") City
-				input.form-control(type="text" id="city" name="city" value=body.city required)
-			.form-group
-				label(for="state") State
-				input.form-control(type="text" id="state" name="state" value=body.state required)
+				.form-group
+					label(for="first_name")
+						sup *
+						| First name
+					input.form-control(type="text" id="first_name" name="first_name" value=body.first_name required)
+				.form-group
+					label(for="last_name")
+						sup *
+						| Last name
+					input.form-control(type="text" id="last_name" name="last_name" value=body.last_name required)
+				.form-group
+					label(for="image")
+						sup *
+						| Image url
+					input.form-control(type="text" id="image" name="image" value=body.image required)
+				.form-group
+					label(for="city")
+						sup *
+						| City
+					input.form-control(type="text" id="city" name="city" value=body.city required)
+				.form-group
+					label(for="state")
+						sup *
+						| State
+					input.form-control(type="text" id="state" name="state" value=body.state required)
 
-			//- These form elements are not required
-			.form-group
-				label(for="interests") Likes
-				input.form-control(type="text" id="interests" name="interests" value=body.interests)
-			.form-group
-				label(for="aversions") Dislikes
-				input.form-control(type="text" id="aversions" name="aversions" value=body.aversions)
-			.form-group
-				label(for="bio") About me
-				input.form-control(type="text" id="bio" name="bio" value=body.bio)
+				//- These form elements are not required
+				.form-group
+					label(for="interests") Likes
+					input.form-control(type="text" id="interests" name="interests" value=body.interests)
+				.form-group
+					label(for="aversions") Dislikes
+					input.form-control(type="text" id="aversions" name="aversions" value=body.aversions)
+				.form-group
+					label(for="bio") About me
+					input.form-control(type="text" id="bio" name="bio" value=body.bio)
 
-			button(type="submit" class="btn btn-default") Register
-		a(href="/login") Already have an account?
+				button.btn.btn-primary.btn-block(type="submit") Register
+			a.pull-right(href="/login") Already have an account?
+			p * required
 
 //- Form elements will be sent in req.body with variable names:
 	email
