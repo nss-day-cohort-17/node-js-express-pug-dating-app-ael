@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports.show = (req, res) =>{
-  res.render('splash');
+  res.render('splash', {page: 'Splash'});
 }
